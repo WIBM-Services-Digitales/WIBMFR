@@ -35,12 +35,12 @@
 
 $(document).scroll( function() {
     if($(document).scrollTop()>160){
-        $("#logo").attr({src: "images/logo-bleu.png",});
+        $("#logo").attr({src: "images/wibm-logo-bleu.png",});
     }else{
         if($(document).width()>767){
-            $("#logo").attr({src: "images/logo-blanc.png",});
+            $("#logo").attr({src: "images/wibm-logo-blanc.png",});
         }else{
-            $("#logo").attr({src: "images/logo-bleu.png",});
+            $("#logo").attr({src: "images/wibm-logo-bleu.png",});
         }
         
     }
