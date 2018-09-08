@@ -342,16 +342,45 @@ header {
             perspective: 100px;
   }
  
-  #header-prestations {
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)), url(https://wibm.fr/images/to-do-list.jpg) no-repeat bottom;}
-  #header-accueil {
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)), url(https://wibm.fr/images/iphone-desk.jpg) no-repeat bottom;}
+    #header-prestations {
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)), url(https://wibm.fr/images/WIBM-header-to-do-list.jpg) no-repeat bottom;}
+ 
+    #header-accueil:before {
+        -webkit-animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+                animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)),
+                    url(https://wibm.fr/images/WIBM-header-iphone-desk.jpg) no-repeat bottom;
+        background-size: cover;
+        content: "";
+        opacity: 0;
+        position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        z-index: -1;
+    }
+    #header-accueil:after {
+        -webkit-animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+                animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+        background: #F9FCFF;
+        content: "";
+        height: 40rem;
+        left: -5%;
+        position: absolute;
+          right: -5%;
+          top: 90%;
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+        z-index: 0;
+    }
+
     
   header:before {
     -webkit-animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
             animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
-    /*background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)),
-                url(https://wibm.fr/images/iphone-desk.jpg) no-repeat bottom;*/
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)),
+                url(https://wibm.fr/images/iphone-desk.jpg) no-repeat bottom;
     background-size: cover;
     content: "";
     opacity: 0;
@@ -1004,9 +1033,15 @@ p.active {
 
 }
 
-#section-call-to-action, #section-quality, #section-method, #section-intro, #section-counter, #section-gallery {
+#section-call-to-action, #section-quality, #section-method, #section-intro, #section-counter, #section-gallery, #section-citation {
     border-top:0.5px solid  rgba(71, 71, 71, 0.356);
     border-bottom:0.5px solid  rgba(71, 71, 71, 0.356);
+}
+
+#section-confiance {
+    border-top:0.5px solid  rgba(182, 182, 182, 0.664);
+    border-bottom:0.5px solid  rgba(182, 182, 182, 0.664);
+    background-color: rgb(49, 51, 64);
 }
 
 .gly-rotate-45 {
